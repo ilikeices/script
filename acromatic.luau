@@ -1,0 +1,11 @@
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("Credits to ANTI_SKIDYT (Enjoy my script -_-), please wait")
+task.wait(2)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 4458601937,4820152700,4315489767,4794315940,4506945409,4524991457")
+task.wait(2)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-pd")
+task.wait(2)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-net")
+task.wait(2)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/banishercool/banishercool/refs/heads/main/Achromoonicback.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/banishercool/banishercool/refs/heads/main/Ownertag.lua"))()
