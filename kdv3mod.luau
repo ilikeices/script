@@ -1,16 +1,14 @@
 if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then local a=game:GetService("CollectionService")local b={}b["ScreenGui_1"]=Instance.new("ScreenGui",game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))b["ScreenGui_1"].IgnoreGuiInset=true b["ScreenGui_1"].ScreenInsets=Enum.ScreenInsets.DeviceSafeInsets b["ScreenGui_1"].ZIndexBehavior=Enum.ZIndexBehavior.Sibling a:AddTag(b["ScreenGui_1"],"main")b["Frame_2"]=Instance.new("Frame",b["ScreenGui_1"])b["Frame_2"].BorderSizePixel=0 b["Frame_2"].BackgroundColor3=Color3.fromRGB(0,0,0)b["Frame_2"].AnchorPoint=Vector2.new(.5,.5)b["Frame_2"].Size=UDim2.new(.36316,0,.46667,0)b["Frame_2"].Position=UDim2.new(.5,0,.5,0)b["Frame_2"].BackgroundTransparency=.5 b["UICorner_3"]=Instance.new("UICorner",b["Frame_2"])b["UICorner_3"].CornerRadius=UDim.new(.04,0)b["TextLabel_4"]=Instance.new("TextLabel",b["Frame_2"])b["TextLabel_4"].TextWrapped=true b["TextLabel_4"].BorderSizePixel=0 b["TextLabel_4"].TextScaled=true b["TextLabel_4"].BackgroundColor3=Color3.fromRGB(255,255,255)b["TextLabel_4"].TextColor3=Color3.fromRGB(255,255,255)b["TextLabel_4"].BackgroundTransparency=1 b["TextLabel_4"].Size=UDim2.new(.81159,0,.32143,0)b["TextLabel_4"].Text="You are in the wrong game, please copy the link below and enter the game. (game: Just a baseplate., game creator: dreammazestudio/ the local maze)"b["TextLabel_4"].Position=UDim2.new(.0942,0,.13095,0)b["TextBox_5"]=Instance.new("TextBox",b["Frame_2"])b["TextBox_5"].CursorPosition=-1 b["TextBox_5"].BorderSizePixel=0 b["TextBox_5"].BackgroundColor3=Color3.fromRGB(255,255,255)b["TextBox_5"].ClearTextOnFocus=false b["TextBox_5"].Size=UDim2.new(.81159,0,.29762,0)b["TextBox_5"].Position=UDim2.new(.1087,0,.5119,0)b["TextBox_5"].Text="https://www.roblox.com/games/123974602339071/UP-Just-a-baseplate"b["TextBox_5"].TextScaled=true b["UIAspectRatioConstraint_6"]=Instance.new("UIAspectRatioConstraint",b["Frame_2"])b["UIAspectRatioConstraint_6"].AspectRatio=1.64286 game:GetService("TeleportService"):Teleport(123974602339071,game:GetService("Players").LocalPlayer)return b["ScreenGui_1"],require end
 
+
+coroutine.resume(coroutine.create(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Tag"))()
+end))
+
 if isfolder and not isfolder("KDV3") then 
 	makefolder("KDV3")
 end
-local ws=game.Workspace
-if ws:FindFirstChild("full") then
-ws.full:Destroy()
-print("Deleted!")
-else
-print("Not Found")
-end
+local Occasions="Halloween"
 if not isfolder("KRYSTALDANCE") then
         makefolder("KRYSTALDANCE")
 end
@@ -25,28 +23,16 @@ Title="Krystal Dance V3";
 Text=text;
 Duration=5 or dur})
 end
-coroutine.resume(coroutine.create(function()
-notify("KDV3 Made by Nitro-GT (Dont support him)")
-wait(.95)
-notify("Fixed By MrY7zz")
-wait(.95)
-notify("Modded By Theo")
-wait(.95)
-notify("Credits goes to them!!!!")
-wait(1)
-notify('pls click "click me" first for updates!!!')
-wait(.75)
-notify('or reanimate directly', 10)
-wait(2)
-notify("Also get a keyboard script")
-wait(2)
-notify("This will be prob the last update...")
-wait(1)
-notify("I barely do scripting nowadays...")
-end))
 
-
-
+local ws=game.Workspace
+if ws:FindFirstChild("full") then
+ws.full:Destroy()
+end
+local Global = (getgenv and getgenv()) or shared
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/packages/FunctionPack.lua"))()
+local function choot(msg)
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(msg)
+end
 local ScreenGui = Instance.new("ScreenGui",KDV3)
 ScreenGui.Name ="KRYSTALDANCE"
 local ui = Instance.new("Frame",ScreenGui)
@@ -58,12 +44,14 @@ local Stop1 = Instance.new("TextButton",ui)
 local ced = Instance.new("TextLabel")
 local Show =Instance.new("TextButton")
 local corner=Instance.new("UICorner",ui)
-local DANCEINFO=Instance.new("TextButton",ui)
+--local DANCEINFO=Instance.new("TextButton",ui)
+--local Enable =Instance.new("TextButton",ui)
 local corner1=Instance.new("UICorner",Run1)
 corner2=Instance.new("UICorner",Stop1)
 corner3=Instance.new("UICorner",Show)
 corner4=Instance.new("UICorner",REANIMATE)
 corner5=Instance.new("UICorner",DANCEINFO)
+corner4=Instance.new("UICorner",Enable)
 local CurrentFrame=Instance.new("Frame",ScreenGui)
 local Stroke=Instance.new("UIStroke",CurrentFrame)
 local Corner=Instance.new("UICorner",CurrentFrame)
@@ -116,7 +104,7 @@ REANIMATE.TextColor3 = Color3.new(1,1,1)
 REANIMATE.TextScaled = true
 REANIMATE.TextSize = 10
 REANIMATE.TextWrapped = true
-
+--[[
 DANCEINFO.Name = "F20 FR"
 DANCEINFO.BackgroundColor3 = Color3.new(0.25, 0.25, 0.25)
 DANCEINFO.BorderSizePixel = 0
@@ -128,7 +116,7 @@ DANCEINFO.TextColor3 = Color3.new(1,1,1)
 DANCEINFO.TextScaled = false
 DANCEINFO.TextSize = 15
 DANCEINFO.TextWrapped = false
-
+]]
 Run1.Name = "Stick"
 Run1.Parent = ui
 Run1.BackgroundColor3 = Color3.new(0.25, 0.25, 0.25)
@@ -142,7 +130,21 @@ Run1.TextColor3 = Color3.new(1,1,1)
 Run1.TextScaled = true
 Run1.TextSize = 10
 Run1.TextWrapped = true
-
+--[[
+Enable.Name = "Stick"
+Enable.Parent = ui
+Enable.BackgroundColor3 = Color3.new(0.25, 0.25, 0.25)
+Enable.BackgroundTransparency = 0
+Enable.BorderSizePixel = 0
+Enable.Position = UDim2.new(1, 0, .35, 0)
+Enable.Size = UDim2.new(0.5, 0, 0, 45)
+Enable.Font = Enum.Font.Sarpanch
+Enable.Text = "Enabled"
+Enable.TextColor3 = Color3.new(1,1,1)
+Enable.TextScaled = true
+Enable.TextSize = 10
+Enable.TextWrapped = true
+]]
 Stop1.BackgroundColor3 = Color3.new(0.25, 0.25, 0.25)
 Stop1.Position=UDim2.new(0.50, 0, 0.629999971, 0)
 Stop1.Size = UDim2.new(0.5, 0, 0, 45)
@@ -177,7 +179,6 @@ Show.TextSize=14
 Show.Size=UDim2.new(0, 50, 0, 50)
 Show.Position=UDim2.new(0, 0, 2, 0)
 Show.BackgroundColor3 = Color3.new(0.25, 0.25, 0.25)
-ui.Visible=true 
 
 CurrentFrame.Size=UDim2.new(0.26572, 0, 0.16564, 0);
 CurrentFrame.Name=[[Current]]
@@ -246,7 +247,7 @@ Credits.TextSize=11
 Credits.Size=UDim2.new(0.4, 0, 0.37037, 0)
 Credits.Position=UDim2.new(0, 125, 0.55556, 0);
 Credits.Name=[[Credits]]
-
+ui.Visible=true 
 local originalUIPosition = ui.Position
 local isTweening = false
 Show.MouseButton1Click:Connect(function()
@@ -282,11 +283,54 @@ local tweenInfo = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection
 local tween = game:GetService("TweenService"):Create(Show, tweenInfo, {Position = UDim2.new(0, 0, .50, 0)})
 tween:Play()
 
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+local savedPosition = nil
+local lp=Players.LocalPlayer
+local function savePosition()
+    local character = lp.Character or lp.CharacterAdded:Wait()
+    local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+    savedPosition = humanoidRootPart.Position
+end
+
+local function teleportToSavedSpot()
+    if savedPosition then
+        local character = lp.Character or lp.CharacterAdded:Wait()
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+        humanoidRootPart.CFrame = CFrame.new(savedPosition)
+        savedPosition = nil
+    end
+end
+local function charespawn()
+    local character = localPlayer.Character
+    if character then
+         savePosition()
+        local humanoid = character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.Health = 0
+        else
+            character:BreakJoints()
+        end
+    end
+lp.CharacterAdded:Wait()
+wait(4)
+teleportToSavedSpot()
+wait(2)
+teleportToSavedSpot()
+wait(.1)
+teleportToSavedSpot()
+wait(.1)
+teleportToSavedSpot()
+wait(.1)
+teleportToSavedSpot()
+wait(.1)
+teleportToSavedSpot()
+wait(.1)
+teleportToSavedSpot()
+end
 
 
-
-
-local CHECKF9=false
+--[[local CHECKF9=false
 DANCEINFO.MouseButton1Click:Connect(function()
 notify("Check Console!")
 Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
@@ -351,6 +395,11 @@ wait(1)
 DANCEINFO.Text="Click me!"
 CHECKF9=false
 end)
+]]
+
+
+
+
 
 local delfile = delfile or function(path)
     if isfile and isfile(path) then
@@ -363,26 +412,98 @@ local delfile = delfile or function(path)
         end)
     end
 end
+
+
+
+
+
+local ALLOWPROTECTION=true 
+local ALLOWPROTECTION1=false
+--[[
+Enable.MouseButton1Click:Connect(function()
+ALLOWPROTECTION1=not ALLOWPROTECTION1
+if ALLOWPROTECTION1 then 
+ALLOWPROTECTION=false
+Enable.Text="Disabled"
+else
+ALLOWPROTECTION=true 
+Enable.Text="Enabled"
+end
+end)]]
+local Place = game.placeId
 local REANIMATION=false
+local function Backup()
+
+end
+local Reanimate="Gelatek"
 REANIMATE.MouseButton1Click:Connect(function()
-if REANIMATION then return notify([[ALREADY REANIMATING]]) end
-if game:GetService("Players").LocalPlayer.Character.Name == "GelatekReanimate" then
-return notify("ALREADY REANIMATED CUH") end
+if REANIMATION then return notify([[Reanimating]]) end
+if game.Workspace:FindFirstChild("GelatekReanimate") or game.Workspace:FindFirstChild(game.Players.LocalPlayer.Name.."_Fake") then return notify("Reanimated.") end
+
+
+if Place == 17574618959 or Place == 88308889239232 or Place==123974602339071 then
 REANIMATION=true
-Run1.Position = UDim2.new(100, 0, 0.629999971, 0)
-    if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then local a=game:GetService("CollectionService")local b={}b["ScreenGui_1"]=Instance.new("ScreenGui",game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"))b["ScreenGui_1"].IgnoreGuiInset=true b["ScreenGui_1"].ScreenInsets=Enum.ScreenInsets.DeviceSafeInsets b["ScreenGui_1"].ZIndexBehavior=Enum.ZIndexBehavior.Sibling a:AddTag(b["ScreenGui_1"],"main")b["Frame_2"]=Instance.new("Frame",b["ScreenGui_1"])b["Frame_2"].BorderSizePixel=0 b["Frame_2"].BackgroundColor3=Color3.fromRGB(0,0,0)b["Frame_2"].AnchorPoint=Vector2.new(.5,.5)b["Frame_2"].Size=UDim2.new(.36316,0,.46667,0)b["Frame_2"].Position=UDim2.new(.5,0,.5,0)b["Frame_2"].BackgroundTransparency=.5 b["UICorner_3"]=Instance.new("UICorner",b["Frame_2"])b["UICorner_3"].CornerRadius=UDim.new(.04,0)b["TextLabel_4"]=Instance.new("TextLabel",b["Frame_2"])b["TextLabel_4"].TextWrapped=true b["TextLabel_4"].BorderSizePixel=0 b["TextLabel_4"].TextScaled=true b["TextLabel_4"].BackgroundColor3=Color3.fromRGB(255,255,255)b["TextLabel_4"].TextColor3=Color3.fromRGB(255,255,255)b["TextLabel_4"].BackgroundTransparency=1 b["TextLabel_4"].Size=UDim2.new(.81159,0,.32143,0)b["TextLabel_4"].Text="You are in the wrong game, please copy the link below and enter the game. (game: Just a baseplate., game creator: dreammazestudio/ the local maze)"b["TextLabel_4"].Position=UDim2.new(.0942,0,.13095,0)b["TextBox_5"]=Instance.new("TextBox",b["Frame_2"])b["TextBox_5"].CursorPosition=-1 b["TextBox_5"].BorderSizePixel=0 b["TextBox_5"].BackgroundColor3=Color3.fromRGB(255,255,255)b["TextBox_5"].ClearTextOnFocus=false b["TextBox_5"].Size=UDim2.new(.81159,0,.29762,0)b["TextBox_5"].Position=UDim2.new(.1087,0,.5119,0)b["TextBox_5"].Text="https://www.roblox.com/games/123974602339071/UP-Just-a-baseplate"b["TextBox_5"].TextScaled=true b["UIAspectRatioConstraint_6"]=Instance.new("UIAspectRatioConstraint",b["Frame_2"])b["UIAspectRatioConstraint_6"].AspectRatio=1.64286 game:GetService("TeleportService"):Teleport(123974602339071,game:GetService("Players").LocalPlayer)return b["ScreenGui_1"],require end
+if Reanimate=="Gelatek" then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Reanimate.lua"))()
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-net")
-wait(2)
+elseif Reanimate=="Current" then
+Backup()
+end
+wait(1)
+if Reanimate=="Gelatek" then
+if ws:FindFirstChild("GelatekReanimate") then 
 REANIMATION=false
 Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
+end
+
+elseif Reanimate=="Current" then 
+if game.Workspace:WaitForChild(game.Players.LocalPlayer.Name.."_Fake") then
+REANIMATION=false
+Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
+end
+end
+else 
+Backup()
+wait(5) 
+REANIMATION=false
+Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
+end
+
+
+
+
+
+
+
 end)
 
-
-
-
-
-
+function respawn()
+local ws=game.Workspace
+local char=game.Players.LocalPlayer.Character
+local newChar = Instance.new("Model")
+newChar.Parent = workspace
+newChar.Name="AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+if char:FindFirstChildOfClass("Humanoid") then char:FindFirstChildOfClass("Humanoid"):ChangeState(15) end
+char:ClearAllChildren()
+game.Players.LocalPlayer.Character = newChar
+if ws then
+dele=ws:WaitForChild(char.Name)
+if dele then
+dele:Destroy()
+end
+end
+game.Players.LocalPlayer.Character = char
+wait(.1)
+newChar:Destroy()
+end
+local function forceRespawn()
+    local player = game:GetService("Players").LocalPlayer
+    if player.Character then
+        player.Character:BreakJoints()
+    end
+    wait(0.5)
+    player:LoadCharacter()
+end
 
 
 local full = game:GetObjects("rbxassetid://107495486817639")[1]:Clone()
@@ -405,8 +526,9 @@ getmetatable(is).__namecall = function(_, id)
 	return loadlocalasset(id)
 end
 
---THIS SHIT IS CASE SENSITIVE CUH, ONE SINGLE MISTAKE WILL MESS THINGS UP, LIKE IT DOEST LOAD THE DANCE 
+--THIS SHIT IS CASE SENSITIVE CUH, ONE SINGLE MISTAKE WILL MESS THINGS UP
 -- VVVVVVVV
+local danceCache = {}
 local function AddDance(Name, ScriptUrl)
     local filePath = "KRYSTALDANCE/"..Name
     if isfile(filePath) then
@@ -419,7 +541,7 @@ local function AddDance(Name, ScriptUrl)
                 local newDance = danceData:Clone()
                 newDance.Name = Name
                 newDance.Parent = full
-                notify("Loaded from storage: "..Name)
+                print("Loaded from storage: "..Name)
                 return newDance
             else
                 notify("Saved dance doesn't return KeyframeSequence: "..Name)
@@ -464,7 +586,6 @@ local function LoadDance(danceName, scriptUrl)
     return dance
 end
 
-
 local timeposcur = 0 
 local sound69 = Instance.new("Sound",game:GetService("RunService"))
 local Playsound = Instance.new("Sound",game:GetService("RunService"))
@@ -498,103 +619,129 @@ local exploit = "shitsploit"
         return s.SoundId
 	end
 
+
+
 local validAudioFiles = {
-    "Sphere.mp3",
-    "rat.mp3",
-    "FunkedUp.mp3",
-    "Assumptions.mp3",
-    "Egypt.mp3",
-    "DO THE FLOP.mp3",
-    "caramell.mp3",
-    "Heel.mp3",
-    "gangnamm.mp3",
-    "Monkey.mp3",
-    "dancingin.mp3",
-    "dr.wav",
-    "griddy.mp3",
-    "lux.ogg",
-    "kazot.mp3",
-    "Domino.mp3",
-    "Liar.mp3",
-    "Mesmerizer.mp3",
-    "Box.mp3",
-    "Static.mp3",
-    "Prism.mp3",
-    "Headlock.mp3",
-    "TUCA DONKA.mp3",
-    "Break.mp3",
-    "XO.mp3",
-    "Soda.mp3",
-    "LoveForU.mp3",
-    "assum.mp3",
-    "balls.mp3",
-    "Distraction.mp3",
-    "ItBurns.mp3",
-    "chronoshift.mp3",
-    "KeepUp.mp3",
-    "Boombox.mp3",
-    "bloodpop.mp3",
-    "leftright.mp3",
-    "heavylove.mp3",
-    "Million.mp3",
-    "Bjean.mp3",
-    "Savor.mp3",
-    "Yamero.mp3",
-    "InternetAngel.mp3",
-    "CLUB PENGUIN DANCE.mp3",
-    "Runaway.mp3",
-    "MioHonda.mp3",
-    "Firework.mp3",
-    "C14.mp3",
-    "Slickback.mp3",
-    "Doodle.mp3",
-    "Goat.mp3",
-    "Bumblebee.mp3",
-    "Stock.mp3",
-    "Shuba Duck.mp3",
-    "Lemon.mp3",
-    "Birdbrain.mp3",
-    "Fein.mp3",
-    "Popipo.mp3",
-    "Pickup.mp3",
-    "Billy.mp3",
-    "rotten.mp3",
-    "Spooky.mp3",
-    "JK.mp3",
-    "Flexworks.mp3",
-    "Unlockit.mp3",
-    "Insanity.mp3",
-    "Cafeteria.mp3",
-    "Tenna.mp3",
-    "Suki.mp3",
-    "CrissCross.mp3",
-    "Dare.mp3",
-    "Lagtrain.mp3",
-    "SmoothMoves.mp3",
-    "brain.mp3",
-    "espresso.mp3",
-    "rakuten.mp3",
-    "tort.mp3",
-    "TakeDown.mp3",
-    "Side Shuffle.mp3",
-    "Rambunctious.mp3",
-    "Electro Swing.mp3",
-    "Crank.mp3",
-    "Apple Pen.mp3",
-    "Igaku.mp3",
-    "Down.mp3",
-    "Kemusan.mp3",
-    "Guli.mp3",
-    "ImOk.mp3",
-    "Spamton.mp3",
-    "Sit.mp3",
-    "Results.mp3",
-    "Yell.mp3",
-    "Yell1.mp3",
-    "Pixelation.mp3",
-    "Yell2.mp3",
-    "Touch.mp3",
-    "Lonely.mp3"
+"Sphere.mp3",
+"rat.mp3",
+"FunkedUp.mp3",
+"Assumptions.mp3",
+"Egypt.mp3",
+"DO THE FLOP.mp3",
+"caramell.mp3",
+"Heel.mp3",
+"gangnamm.mp3",
+"Monkey.mp3",
+"dancingin.mp3",
+"dr.wav",
+"griddy.mp3",
+"lux.ogg",
+"kazot.mp3",
+"Domino.mp3",
+"Liar.mp3",
+"Mesmerizer.mp3",
+"Box.mp3",
+"Static.mp3",
+"Prism.mp3",
+"Headlock.mp3",
+"TUCA DONKA.mp3",
+"Break.mp3",
+"XO.mp3",
+"Soda.mp3",
+"LoveForU.mp3",
+"assum.mp3",
+"balls.mp3",
+"Distraction.mp3",
+"ItBurns.mp3",
+"chronoshift.mp3",
+"KeepUp.mp3",
+"Boombox.mp3",
+"bloodpop.mp3",
+"leftright.mp3",
+"heavylove.mp3",
+"Million.mp3",
+"Bjean.mp3",
+"Savor.mp3",
+"Yamero.mp3",
+"InternetAngel.mp3",
+"CLUB PENGUIN DANCE.mp3",
+"Runaway.mp3",
+"MioHonda.mp3",
+"Firework.mp3",
+"C14.mp3",
+"Slickback.mp3",
+"Doodle.mp3",
+"Goat.mp3",
+"Bumblebee.mp3",
+"Stock.mp3",
+"Shuba Duck.mp3",
+"Lemon.mp3",
+"Birdbrain2.mp3",
+"Fein.mp3",
+"Popipo.mp3",
+"Pickup.mp3",
+"Billy.mp3",
+"rotten.mp3",
+"Spooky.mp3",
+"JK.mp3",
+"Flexworks.mp3",
+"Unlockit.mp3",
+"Insanity.mp3",
+"Cafeteria.mp3",
+"Tenna.mp3",
+"Suki.mp3",
+"CrissCross.mp3",
+"Dare.mp3",
+"Lagtrain.mp3",
+"SmoothMoves.mp3",
+"brain.mp3",
+"espresso.mp3",
+"rakuten.mp3",
+"tort.mp3",
+"TakeDown.mp3",
+"Side Shuffle.mp3",
+"Rambunctious.mp3",
+"Electro Swing.mp3",
+"Crank.mp3",
+"Apple Pen.mp3",
+"Igaku2.mp3",
+"Down.mp3",
+"Kemusan.mp3",
+"Guli.mp3",
+"ImOk.mp3",
+"Spamton.mp3",
+"Sit.mp3",
+"Results.mp3",
+"Yell.mp3",
+"Yell1.mp3",
+"Pixelation.mp3",
+"Yell2.mp3",
+"Touch.mp3",
+"Lonely.mp3",
+"whateverlike.mp3",
+"Matchmaker.mp3",
+"faster.ogg",
+"Metro.mp3",
+"Jumpstyle.mp3",
+"Invincible.mp3",
+"CrackDown.mp3",
+"CyberBop.mp3",
+"BrickBattler.mp3",
+"BreakDance2005.mp3",
+"BreakDance.mp3",
+"CrackDown.mp3",
+"Halloween.mp3",
+"TANOC.mp3",
+"Shiawase.mp3",
+"Tf2.mp3",
+"Smug.mp3",
+"Wait2.mp3",
+"Livesey.mp3",
+"Pokedance.mp3",
+"Slash.mp3",
+"God only knows.mp3",
+"GetDown.mp3",
+"SpokenFor.mp3",
 }
 
 --THIS SHIT IS CASE SENSITIVE CUH, ONE SINGLE MISTAKE WILL MESS THINGS UP
@@ -645,14 +792,16 @@ local function DanceAsset(file)
     end
 end
 
+local function Forcestop()
+     Playsound:Stop()
+     sound69:Stop()
+end
+
 local function Info(DanceInfo,KeyInfo)
      Dance.Text=DanceInfo
      Key.Text=KeyInfo
 end
 
-local function Forcestop()
-     sound69:Stop()
-end
 local char=game:GetService("Players").LocalPlayer.Character
 local Character =char
 local Humanoid = Character:WaitForChild("Humanoid")
@@ -664,19 +813,121 @@ local UPDATE=nil
 local sprinting = false 
 local uis = game:GetService("UserInputService")
 
+notify("Added 2 new dances ")
+
+--coroutine.wrap(AsyncPreloadDances)()
+
 
 local RUNNING = false
+
 Run1.MouseButton1Click:Connect(function()
 if REANIMATION then return notify("Reanimating please wait") end
 if RUNNING then return notify("SCRIPT IS RUNNING!!") end
-if game:GetService("Players").LocalPlayer.Character.Name ~= "GelatekReanimate" then
-return notify("REANIMATE FIRST CUH") end
+if Place == 17574618959 or Place == 88308889239232 or Place==123974602339071 then
+if game:GetService("Players").LocalPlayer.Character.Name ~= "GelatekReanimate" then return notify("REANIMATE FIRST CUH")
+end
+else 
+if game:GetService("Players").LocalPlayer.Character.Name ~= Character.Name.."_Fake" then
+     return notify("REANIMATE FIRST CUH") 
+end
+end
+if ws:FindFirstChild("GelatekReanimate").Humanoid.Health==0.03500000014901161 then
 Run1.Position = UDim2.new(10, 0, 0.629999971, 0)
+RUNNING = true
+
+
+
+
+
+
+
 local tweenInfo = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
 local tween = game:GetService("TweenService"):Create(CurrentFrame, tweenInfo, {Position = UDim2.new(0.385, 0, .75, 0)})
 tween:Play()
-RUNNING = true
+local player = game:GetService("Players").LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local workspace = game:GetService("Workspace")
+local SG = Instance.new("ScreenGui")
+SG.Parent = player:WaitForChild("PlayerGui")
+local CaptionStroke = Instance.new("UIStroke")
+local Caption = Instance.new("TextLabel")
+local G = Color3.fromRGB(100, 100, 100)
+local A = Color3.fromRGB(255,255,255)
+local W = Color3.fromRGB(255, 255, 255)
+local H = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, A),
+    ColorSequenceKeypoint.new(0.500, G),
+    ColorSequenceKeypoint.new(1, W)
+}
 
+local basgui = Instance.new("GuiMain")
+basgui.Parent = game:GetService("Players").LocalPlayer.PlayerGui
+basgui.Name = "VISgui"
+local fullscreenz = Instance.new("Frame")
+fullscreenz.Parent = basgui
+fullscreenz.BackgroundColor3 = Color3.new(255, 255, 255)
+fullscreenz.BackgroundTransparency = 1
+fullscreenz.BorderColor3 = Color3.new(17, 17, 17)
+fullscreenz.Size = UDim2.new(1, 0, 1, 0)
+fullscreenz.Position = UDim2.new(0, 0, 0, 0)
+local imgl2 = Instance.new("ImageLabel",fullscreenz)
+imgl2.BackgroundTransparency = 1
+imgl2.Visible = false
+imgl2.BorderSizePixel = 0
+imgl2.ImageTransparency = 0.5
+imgl2.ImageColor3 = Color3.new(0,0,0)
+imgl2.Position = UDim2.new(0.75,0,0.55,0)
+imgl2.Size = UDim2.new(0,600,0,600)
+imgl2.Image = "rbxassetid://320731120"
+local techc = imgl2:Clone()
+techc.Parent = fullscreenz
+techc.Visible = false
+techc.ImageTransparency = 0.5
+techc.Size = UDim2.new(0,700,0,700)
+techc.Position = UDim2.new(0.75,-50,0.55,-50)
+techc.ImageColor3 = Color3.new(0,0,0)
+techc.Image = "rbxassetid://521073910"
+local circl = imgl2:Clone()
+circl.Parent = fullscreenz
+circl.Visible = false
+circl.ImageTransparency = 0
+circl.Size = UDim2.new(0,500,0,500)
+circl.Position = UDim2.new(0.75,50,0.55,50)
+circl.ImageColor3 = Color3.new(0,0,0)
+circl.Image = "rbxassetid://997291547"
+local circl2 = imgl2:Clone()
+circl2.Parent = fullscreenz
+circl2.Visible = false
+circl2.ImageTransparency = 0
+circl2.ImageColor3 = Color3.new(0,0,0)
+circl2.Image = "rbxassetid://997291547"
+local imgl2b = imgl2:Clone()
+imgl2b.Parent = fullscreenz
+imgl2b.Visible = false
+imgl2b.ImageTransparency = 0
+imgl2b.Size = UDim2.new(0,500,0,500)
+imgl2b.Position = UDim2.new(0.75,50,0.55,50)
+local ned = Instance.new("TextLabel",fullscreenz)
+ned.ZIndex = 2
+ned.Visible = false
+ned.FontFace = Font.new([[rbxasset://fonts/families/PressStart2P.json]], Enum.FontWeight.Bold, Enum.FontStyle.Italic)
+ned.BackgroundTransparency = 1
+ned.BorderSizePixel = 0.65
+ned.Size = UDim2.new(0.4,0,0.2,0)
+ned.Position = UDim2.new(0.6,0,0.8,0)
+ned.TextColor3 = Color3.new(1,0,0)
+ned.TextStrokeColor3 = Color3.new(0,0,0)
+ned.TextScaled = true
+ned.TextStrokeTransparency = 0
+--ned.Text = "▣ PIXELATION ▣"
+ned.Text = ""
+ned.TextSize = 24
+ned.Rotation = 1
+ned.TextYAlignment = "Bottom"
+local Text3 = Instance.new("UIStroke",ned)
+Text3.Thickness = 5
+Text3.Color = Color3.fromRGB(0,0,0)
+Text3.LineJoinMode = Enum.LineJoinMode.Miter
 
 
 
@@ -693,7 +944,6 @@ if lol == 2 then
 end
 local idleanim = is:LoadLocalAsset("rbxassetid://74204337812128") -- uuid. 136078657506707
 local walkanim = is:LoadLocalAsset("rbxassetid://73688515498572") -- uuid. 130213485744288
-local sprintanim = is:LoadLocalAsset("rbxassetid://73688515498572") -- uuid. 119558526211035
 local randompart = Instance.new("Part",game:GetService("RunService"))
 local coolparticles = game:GetObjects("rbxassetid://87299663038091")[1].ParticleAttachment
 coolparticles.Parent = randompart
@@ -702,11 +952,17 @@ local script = Instance.new("LocalScript")
 real = true
 pcall(function()
 	local OxideApi = loadstring(game:HttpGet("https://raw.githubusercontent.com/somethingsimade/Utils/refs/heads/main/OxideApi"))()
-	OxideApi.Notification("Krystal Dance V3, Made by Hemi, fixed by MrY7zz",10)
+	OxideApi.Notification("Krystal Dance V3, Fixed by MrY7zz, Modded by Theo",10)
 end)
+local mrandom=math.random
 local playanother = false
 local playing = false
 local dancing = false
+local sin=math.sin
+local osclock=os.clock
+local sine=1
+local cos=math.cos
+local change = 1
 local rtrnv;
 local c;
 local tbl3;
@@ -793,7 +1049,7 @@ local function wait2(tim)
 		end
 	end
 end
-local function kftotbl(kf) -- Below this is literal pain..
+local function kftotbl(kf)
 	tbl3 = {}
 	for i,v in pairs(kf:GetDescendants()) do
 		if v:IsA("Pose") then
@@ -848,18 +1104,15 @@ function swait(num)
 		end
 	end
 end
-
 function fwait(seconds)
-	seconds = (seconds < 0.000001) and 0.000001 or seconds -- absolute limit of roblox, anything below just crashes lol so this limits it so it doesnt crash
-
+	seconds = (seconds < 0.000001) and 0.000001 or seconds
 	local event = game:GetService("RunService").PreRender or game:GetService("RunService").Heartbeat
 
-	local startTime = tick()
-	while tick() - startTime < seconds do
-		event:Wait()
-	end
+   	local startTime = tick()
+   	while tick() - startTime < seconds do
+   		event:Wait()
+   	end
 end		
-
 local function makeanimlibrary()
 	local RunService = game:GetService("RunService")
 
@@ -1030,9 +1283,6 @@ local function makeanimlibrary()
 	AnimLibrary.KeyFrameSequanceToTable = ConvertToTable
 	return AnimLibrary
 end
-
-
-
 local animplayer = makeanimlibrary()
 local currentanim = nil
 local iscurrentadance = nil
@@ -1040,7 +1290,9 @@ local rigTable = animplayer.AutoGetMotor6D(char, "Motor6D")
 local function playanim(id, speed, isadance, custominstance)
     local asset
     
-    if type(id) == "string" and full:FindFirstChild(id) then
+    if typeof(id) == "Instance" then
+        asset = id
+    elseif type(id) == "string" and full:FindFirstChild(id) then
         asset = full:FindFirstChild(id)
     elseif type(id) == "string" and full.DanceLookup and full.DanceLookup:FindFirstChild(id) then
         asset = full:FindFirstChild(full.DanceLookup[id].Value)
@@ -1088,8 +1340,6 @@ local function playanim(id, speed, isadance, custominstance)
 		currentanim:Play(0)
 	end
 end
-
-
 local function choose()
 	local choice = math.random(1, 3)
 	if choice == 1 then
@@ -1103,6 +1353,7 @@ end
 wait(.1)
 playbacktrack=true
 local function stopanim()
+     Info("None","None")
      loopsplaying = math.max(0, loopsplaying - 1)
      local SavedTime = Playsound.TimePosition
      playanother = true 
@@ -1110,7 +1361,7 @@ local function stopanim()
          Playsound.PlaybackSpeed = 1
          if playbacktrack == true then
              Playsound.Volume = 0
-             Playsound:Stop() 
+             Playsound:Stop()
          else 
              Playsound.Volume = 0
              Playsound:Stop()
@@ -1136,7 +1387,7 @@ local function stopanim()
          
          if playbacktrack and not dancing then
              sound69:Stop()
-             Playsound.SoundId = DanceAsset("Sphere.mp3")
+             sound69.Volume=.75
              Playsound.TimePosition = SavedTime
              Playsound.Volume = .75
              Playsound:Play()
@@ -1144,11 +1395,36 @@ local function stopanim()
          
          if walking == true and idle == false and char.Humanoid.MoveDirection ~= Vector3.new(0,0,0) and dancing == false and playanother == true then 
              task.spawn(function()
-                 playanim(74204337812128, 1, false) -- uuid.
+                 playanim(74204337812128, 1, false)
              end)
          end
      end
 end
+local ran=math.random(1,7)
+if ran==1 then 
+Playsound.SoundId = DanceAsset("Sphere.mp3")
+elseif ran==2 then
+Playsound.SoundId = DanceAsset("Shiawase.mp3")
+elseif ran==3 then 
+Playsound.SoundId = DanceAsset("TANOC.mp3")
+elseif ran==4 then 
+Playsound.SoundId = DanceAsset("Tf2.mp3")
+elseif ran==5 then 
+Playsound.SoundId = DanceAsset("Slash.mp3")
+elseif ran==6 then 
+Playsound.SoundId = DanceAsset("God only knows.mp3")
+elseif ran==7 then 
+Playsound.SoundId = DanceAsset("Matchmaker.mp3")
+end
+Playsound.TimePosition =0
+Playsound.Volume = .75
+Playsound:Play()
+
+
+
+
+
+
 
 
 INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
@@ -1162,10 +1438,15 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				dancing = true
 				Playsound.Volume=0
 				task.wait(.005)
+				local meh=mrandom(1,2)
+				if meh==2 then
+				sound69.SoundId = DanceAsset("Matchmaker.mp3")
+				else
 				sound69.SoundId = DanceAsset("rat.mp3")
+				  end
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("Rat1", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Rat1.lua")
-				Info("Rat1","Q")
+				Info("Rat 1","Q")
 				sound69:Play()
 				if dance then
 				playanim(dance) -- uuid. 106353328250763
@@ -1307,7 +1588,10 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				dancing = true
 				Playsound.Volume=0
 				task.wait(.005)
-				sound69.SoundId = DanceAsset("Monkey.mp3")
+				if isfile and not isfile("KDV3/Monkey.mp3") then 
+				  writefile("KDV3/Takino.mp3",game:HttpGet("https://github.com/ilikeices/animated/blob/Audios-1/Monkey.mp3?raw=true"))
+				  end 
+				sound69.SoundId = getcustomasset("KDV3/Monkey.mp3")
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("BombMonkey", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Bomb Monkey.lua")
 				Info("Bomb Monkey","P")
@@ -1377,9 +1661,10 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				sound69.SoundId = DanceAsset("lux.ogg")
 				timeposcur = sound69.TimePosition 
 				sound69:Play()
-				Info("Lux","Z")
+				Info("Luxurious","Z")
 				playanim(94534967284996) -- uuid. 15092317950
 			else
+			  
 				stopanim()
 
 			end
@@ -1625,7 +1910,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				sound69.SoundId = DanceAsset("assum.mp3")
 				timeposcur = sound69.TimePosition 
 				sound69:Play()
-				Info("Assumptions","R")
+				Info("Assumptions","t")
 				playanim(129275138998868) -- uuid. 15705077587
 			else
 				stopanim()
@@ -2059,11 +2344,16 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				dancing = true
 				Playsound.Volume=0
 				task.wait(.005)
+				local meh=mrandom(1,2)
+				if meh==2 then
+				sound69.SoundId = DanceAsset("Matchmaker.mp3")
+				else
 				sound69.SoundId = DanceAsset("rat.mp3")
+				  end
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("Rat2", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Rat2.lua")
 				sound69:Play()
-				Info("Rat2","P")
+				Info("Rat 2","P")
 				if dance then
 				playanim(dance) -- uuid. 8915458946
 				end
@@ -2108,7 +2398,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				dancing = true
 				Playsound.Volume=0
 				task.wait(.005)
-				sound69.SoundId = DanceAsset("Birdbrain.mp3")
+				sound69.SoundId = DanceAsset("Birdbrain2.mp3")
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("Birdbrain", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Birdbrain.lua")
 				Info("Birdbrain","H")
@@ -2321,7 +2611,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				sound69.SoundId = DanceAsset("tort.mp3")
 				timeposcur = sound69.TimePosition 
 				sound69:Play()
-				Info("Tort","-")
+				Info("Torture","-")
 				playanim(99811468921857) -- uuid. 71723925114737
 			else
 				stopanim()
@@ -2578,7 +2868,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("Crankthat", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Crank That.lua")
 				sound69:Play()
-				Info("Crank","X")
+				Info("Crank That","X")
 				if dance then
 				playanim(dance) -- uuid. 71723925114737
 				end
@@ -2612,7 +2902,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("Down", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Going Down.lua")
 				sound69:Play()
-				Info("Down","V")
+				Info("Going Down","V")
 				if dance then
 				playanim(dance) 
 				end-- uuid. 71723925114737
@@ -2676,7 +2966,7 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				dancing = true
 				Playsound.Volume=0
 				task.wait(.005)
-				sound69.SoundId = DanceAsset("Igaku.mp3")
+				sound69.SoundId = DanceAsset("Igaku2.mp3")
 				timeposcur = sound69.TimePosition 
 				local dance=LoadDance("Igaku", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Igaku.lua")
 				sound69:Play()
@@ -2693,9 +2983,10 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 				dancing = true
 				Playsound.Volume=0
 				task.wait(.005)
+				sound69.TimePosition = 6.5
 				sound69.SoundId = DanceAsset("Headlock.mp3")
 				timeposcur = sound69.TimePosition 
-				local dance=LoadDance("Headlock2", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Headlock2.lua")
+				local dance=LoadDance("Headlock3", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Headlock3.lua")
 				Info("Headlock 2","[")
 				sound69:Play()
 				if dance then
@@ -2860,21 +3151,381 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 			else
 				stopanim()
 			end
+	     elseif k == "g" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				local meh=mrandom(1,2)
+				if meh==2 then
+				sound69.SoundId = DanceAsset("Matchmaker.mp3")
+				else
+				sound69.SoundId = DanceAsset("rat.mp3")
+				  end
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				Info("Rat 3","G")
+				playanim(117971041844492) 
+			else
+				stopanim()
+			end
+	     elseif k == "h" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("whateverlike.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				Info("Uh","H")
+				playanim(99152023738830) 
+			else
+				stopanim()
+			end
+	     elseif k == "j" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("CyberBop.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("CyberBop", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/CyberBop.lua")
+				sound69:Play()
+				Info("CyberBop","J")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "k" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Invincible.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Invincible", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Invincible.lua")
+				sound69:Play()
+				Info("Invincible","K")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "l" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Jumpstyle.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Jumpstyle3", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Jumsptyle3.lua")
+				sound69:Play()
+				Info("Jumpstyle","L")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "z" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("BreakDance.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("BreakDance", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/BreakDance.lua")
+				sound69:Play()
+				Info("BreakDance","Z")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "x" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("BreakDance2005.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("BreakDance2005", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/BreakDance2005.lua")
+				sound69:Play()
+				Info("BreakDance 2005","X")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "c" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("faster.ogg")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Requiem", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Requiem.lua")
+				sound69:Play()
+				Info("Requiem","C")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "v" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Metro.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Metro", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Metro.lua")
+				sound69:Play()
+				Info("Metro Man","V")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "b" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("CrackDown.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("CrackDown", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/CrackDown.lua")
+				sound69:Play()
+				Info("Crack Down","B")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "n" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Smug.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Smug", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Smug.lua")
+				sound69:Play()
+				Info("Smug Dance","N")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "rightbracket" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Wait2.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Wait", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Wait.lua")
+				sound69:Play()
+				Info("Wait","]")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "leftbracket" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Jumpstyle.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("Jumpstyle4", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Jumpstyle4.lua")
+				sound69:Play()
+				Info("Jumpstyle 1","[")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "minus" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("KeepUp.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				local dance=LoadDance("KeepUp1", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Keep Up1.lua")
+				sound69:Play()
+				Info("Keep Up 1","-")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+			end
+	     elseif k == "comma" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Livesey.mp3")
+				timeposcur = sound69.TimePosition 
+				sound69:Play()
+				char.Humanoid.WalkSpeed = 4*char:GetScale()
+				local dance=LoadDance("Livesey", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Livesey.lua")
+				sound69:Play()
+				Info("Livesey",",")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+			  char.Humanoid.WalkSpeed = 14*char:GetScale()
+				stopanim()
+			end
 	     end
 	end
+	if mode == 6 then 
+	  if k == "q" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Mesmerizer.mp3")
+				timeposcur = sound69.TimePosition 
+				local dance=LoadDance("Mesmerizer1", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Mesmerizer.lua")
+				sound69:Play()
+				Info("Mesmerizer 1","Q")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+		  	end
+	  elseif k == "e" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("Pokedance.mp3")
+				timeposcur = sound69.TimePosition 
+				local dance=LoadDance("Pokedance", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Pokedance.lua")
+				sound69:Play()
+				Info("Pokedance","E")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+		  	end
+	  elseif k == "r" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				if isfile and not isfile("KDV3/Takino.mp3") then 
+				  writefile("KDV3/Takino.mp3",game:HttpGet("https://github.com/ilikeices/animated/blob/Audios-1/Takino.mp3?raw=true"))
+				  end 
+				sound69.SoundId = getcustomasset("KDV3/Takino.mp3")
+				timeposcur = sound69.TimePosition 
+				local dance=LoadDance("Takino", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Takino.lua")
+				sound69:Play()
+				Info("Takino","R")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+		  	end
+	  elseif k == "t" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("SpokenFor.mp3")
+				timeposcur = sound69.TimePosition 
+				local dance=LoadDance("SpokenFor", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Spoken For.lua")
+				sound69:Play()
+				Info("Spoken For","T")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+		  	end
+	  elseif k == "y" then
+			if dancing == false then
+				stopanim()
+				dancing = true
+				Playsound.Volume=0
+				task.wait(.005)
+				sound69.SoundId = DanceAsset("GetDown.mp3")
+				timeposcur = sound69.TimePosition 
+				local dance=LoadDance("GetDown", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Get Down.lua")
+				sound69:Play()
+				Info("Get Down","Y")
+				if dance then
+				playanim(dance) 
+				end-- uuid. 71723925114737
+			else
+				stopanim()
+		  	end
+			end
+	  end
 	if k == "equals" then 
 		playbacktrack = not playbacktrack
 		if dancing == false then 
 			if playbacktrack == true then 
 			--	sound69:Play()
-			  	sound69.Volume = .75
+			  	Playsound.Volume = .75
 			  	game:GetService("StarterGui"):SetCore("SendNotification", {
 			  		Title = "Krystal Dance V3";
 			  		Duration = 5;
 			  		Text = "Background music enabled"
 			  	})
 			else 
-				sound69.Volume=0
+				Playsound.Volume=0
 				game:GetService("StarterGui"):SetCore("SendNotification", {
 					Title = "Krystal Dance V3";
 					Duration = 5;
@@ -2887,14 +3538,22 @@ INPUTLOOP = uis.InputBegan:Connect(function(k,chatting)
 		sprinting = not sprinting
 	end
 if k == "m" then
-if mode == 4 then 
+if mode== 5 then
+mode=6
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "Krystal Dance V3";
+	Duration = 5;
+	Text = "Page 6"
+})
+Page.Text="6"
+elseif mode == 4 then 
 mode = 5 
+Page.Text="5"
 game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Krystal Dance V3";
 	Duration = 5;
 	Text = "Page 5"
 })
-Page.Text="5"
 elseif mode == 3 then 
 mode = 4
   game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -2920,7 +3579,7 @@ elseif mode == 1 then
 	Text = "Page 2"
 })
 Page.Text="2"
-elseif mode == 5  then 
+elseif mode == 6  then 
     mode = 1
     game:GetService("StarterGui"):SetCore("SendNotification", {
 	Title = "Krystal Dance V3";
@@ -2928,7 +3587,7 @@ elseif mode == 5  then
 	Text = "Page 1"
 })
 Page.Text="1"
-    end
+end
 end
 end)
 
@@ -2939,6 +3598,7 @@ end)
 
 
 
+  local uh=math.random(1,2)
 STATES=char.Humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(function()
 	if char.Humanoid.Sit == false then 
 		if char.Humanoid.MoveDirection == Vector3.new(0,0,0) and dancing == false and idle == false then
@@ -2947,7 +3607,18 @@ STATES=char.Humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(function(
 			stopanim()
 			fwait(1/500)
 			if idle == true and walking == false and char.Humanoid.MoveDirection == Vector3.new(0,0,0) and dancing == false and playanother==true then
-				playanim(0,1,false,idleanim )
+			  
+			  if uh==1 then
+				local dance=LoadDance("Pixelation", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Pixelation.lua")
+				     if dance then
+					playanim(dance,2.2,false)
+				     end
+			  elseif uh==2 then
+			       local dance=LoadDance("Idle2", "https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Idle2.lua")
+				  if dance then
+					playanim(dance,2.2,false)
+					end
+				end
 			end
 		elseif char.Humanoid.MoveDirection ~= Vector3.new(0,0,0) and dancing == false and walking == false then 
 			char.Humanoid.WalkSpeed = 14*char:GetScale()
@@ -2958,7 +3629,7 @@ STATES=char.Humanoid:GetPropertyChangedSignal("MoveDirection"):Connect(function(
 			if sprinting == false then 
 				char.Humanoid.WalkSpeed = 14*char:GetScale()
 				if walking == true and idle == false and  char.Humanoid.MoveDirection ~= Vector3.new(0,0,0) and dancing == false and playanother==true  then 
-					playanim(130213485744288,1,false,walkanim)
+				  playanim(130213485744288,1,false,walkanim)
 				end
 			else
 				char.Humanoid.WalkSpeed = 24*char:GetScale()
@@ -3033,6 +3704,7 @@ mbigfedora = Instance.new("SpecialMesh", bigfedora)
 mbigfedora.MeshType = "FileMesh"
 mbigfedora.Scale = Vector3.new(5, 5, 5)
 mbigfedora.MeshId,mbigfedora.TextureId = 'http://www.roblox.com/asset/?id=1125478','http://www.roblox.com/asset/?id=1125479'
+coroutine.resume(coroutine.create(function()
 for i = 1, 60 do
 	bigfedora.CFrame = bigfedora.CFrame:lerp(CFrame.new(Root.Position) * CFrame.new(0,-.1,0) * CFrame.Angles(math.rad(0),math.rad(0),math.rad(0)),.09)
 	task.wait(1/60)
@@ -3050,6 +3722,7 @@ for i = 1, 29 do
 	task.wait(1/60)
 end
 bigfedora:Remove()
+end))
 local nim= 0
 char.Humanoid.Died:Connect(function()
 	sound69.PlaybackSpeed = 0
@@ -3064,8 +3737,14 @@ repeat
 	char.Humanoid:Move(Vector3.new(0,0,-1),true)
 	task.wait(1/60)
 	nim=nim+1
-until nim==3
+until nim==10
+wait(2)
+local r = 255
+local g = 0
+local b = 0
+local stage = 1
 UPDATE=RunService.RenderStepped:Connect(function(deltaTime: number)
+sine = sine + change
 	local function Alpha(n)
 		return math.clamp(n*deltaTime*60,0,1)
 	end
@@ -3090,8 +3769,8 @@ UPDATE=RunService.RenderStepped:Connect(function(deltaTime: number)
 			Neck.C0 = Neck.C0:Lerp(NeckOriginC0 * NeckCFrame, updatesPerSecond * deltaTime)
 		end
 	elseif dancing == true then 
-	   	Neck.C0 = oldC0N
-	end	
+		Neck.C0 = oldC0N
+	end
 	if char.Humanoid.MoveDirection == Vector3.new(0,0,0) then 
 		walking = false 
 		idle = true 
@@ -3099,39 +3778,155 @@ UPDATE=RunService.RenderStepped:Connect(function(deltaTime: number)
 		walking = true 
 		idle = false 
 	end
+-- Rgb Script
+if stage == 1 then
+g = g + 2.5
+if g >= 255 then
+g = 255
+stage = 2
+end
+elseif stage == 2 then
+r = r - 2.5
+if r <= 0 then
+r = 0
+stage = 3
+end
+elseif stage == 3 then
+b = b + 2.5
+if b >= 255 then
+b = 255
+stage = 4
+end
+elseif stage == 4 then
+g = g - 2.5
+if g <= 0 then
+g = 0
+stage = 5
+end
+elseif stage == 5 then
+r = r + 2.5
+if r >= 255 then
+r = 255
+stage = 6
+end
+elseif stage == 6 then
+b = b - 2.5
+if b <= 0 then
+b = 0
+stage = 1
+end
+end
+local rgb=Color3.fromRGB(r,g,b)
+techc.ImageColor3=rgb
+ned.TextColor3=rgb
+--Text3.TextColor3=rgb
+if dancing==true then
+if Occasions=="Halloween" then
+techc.Rotation = techc.Rotation + 0.1
+imgl2.Rotation = imgl2.Rotation - sound69.PlaybackLoudness/50
+imgl2.ImageColor3 = Color3.new(0,0,0)
+imgl2b.Rotation = imgl2b.Rotation + sound69.PlaybackLoudness/25
+imgl2b.ImageColor3 = Color3.new(220/255 + sound69.PlaybackLoudness/500,100/255 + sound69.PlaybackLoudness/750,0)
+else
+techc.Rotation = techc.Rotation + 0.1
+imgl2.Rotation = imgl2.Rotation - sound69.PlaybackLoudness/50
+imgl2.ImageColor3 = Color3.new(0.15 + sound69.PlaybackLoudness/2500,0,0.6 + sound69.PlaybackLoudness/1000)
+imgl2b.Rotation = imgl2b.Rotation + sound69.PlaybackLoudness/25
+imgl2b.ImageColor3 = Color3.new(0,0.3 + sound69.PlaybackLoudness/1500,0.6 + sound69.PlaybackLoudness/1000)
+end
+CurrentFrame.BackgroundColor3=Color3.fromRGB(50-sound69.PlaybackLoudness/25,50-sound69.PlaybackLoudness/25,50-sound69.PlaybackLoudness/25)
+CurrentFrame.BackgroundTransparency=.75-sound69.PlaybackLoudness/500
+else
+CurrentFrame.BackgroundColor3=Color3.fromRGB(25+Playsound.PlaybackLoudness/25,25+Playsound.PlaybackLoudness/25,25+Playsound.PlaybackLoudness/25)
+CurrentFrame.BackgroundTransparency=.25+Playsound.PlaybackLoudness/200
+if Occasions=="Halloween" then
+techc.Rotation = techc.Rotation + 0.1
+imgl2.Rotation = imgl2.Rotation - Playsound.PlaybackLoudness/50
+imgl2.ImageColor3 = Color3.new(0,0,0)
+imgl2b.Rotation = imgl2b.Rotation + Playsound.PlaybackLoudness/25
+imgl2b.ImageColor3 = Color3.new(220/255 + Playsound.PlaybackLoudness/500,100/255 + Playsound.PlaybackLoudness/750,0)
+else
+techc.Rotation = techc.Rotation + 0.1
+imgl2.Rotation = imgl2.Rotation - Playsound.PlaybackLoudness/50
+imgl2.ImageColor3 = Color3.new(0.15 + Playsound.PlaybackLoudness/2500,0,0.6 + Playsound.PlaybackLoudness/1000)
+imgl2b.Rotation = imgl2b.Rotation + Playsound.PlaybackLoudness/25
+imgl2b.ImageColor3 = Color3.new(0,0.3 + Playsound.PlaybackLoudness/1500,0.6 + Playsound.PlaybackLoudness/1000)
+end
+end
+--textLabel1.Rotation=5*cos(sine/1)+math.random(-2.5,2.5)
+ned.Rotation = 0 - 2 * math.cos(sine / 24)
+ned.Position = UDim2.new(0.6,0 - 10 * math.cos(sine / 32),0.8,0 - 10 * math.cos(sine / 45))
 end)
-
-
+else
+notify("Wait for the health to be 0")
+Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
+ return end
 end)
-
 
 Stop1.MouseButton1Click:Connect(function()
-if RUNNING then
-RUNNING=false
-local tweenInfo = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-local tween = game:GetService("TweenService"):Create(CurrentFrame, tweenInfo, {Position = UDim2.new(0.385, 0, 1.15, 0)})
-tween:Play()
-end
-Forcestop()
-Playsound:Stop()
-Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
-if UPDATE then
-     UPDATE:Disconnect()
-     UPDATE=nil
-end
-if STATES then 
-     STATES=nil 
-end
-if SITTING then
-     SITTING=nil
-end 
-if INPUTLOOP then
-     INPUTLOOP:Disconnect()
-     INPUTLOOP=nil
-end
-if sprinting then
-     sprinting=false
-end
---wait(1)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-rs")
+    if RUNNING then
+        RUNNING = false
+        local tweenInfo = TweenInfo.new(1.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+        local tween = game:GetService("TweenService"):Create(CurrentFrame, tweenInfo, {Position = UDim2.new(0.385, 0, 1.15, 0)})
+        CurrentFrame.BackgroundColor3=Color3.fromRGB(50,50,50)
+        CurrentFrame.BackgroundTransparency=.55
+     tween:Play()
+     local player = game.Players.LocalPlayer.PlayerGui
+      if player then
+           local Gui=player:FindFirstChild("VISgui")
+           if Gui then
+             Gui:Destroy()
+         end
+       end
+    end
+    Forcestop()
+    Playsound:Stop()
+    Run1.Position = UDim2.new(0, 0, 0.629999971, 0)
+--[[    local player = game.Players.LocalPlayer
+    if player.Character then
+        local head = player.Character:FindFirstChild("Head")
+        if head then
+            local billboard = head:FindFirstChild("Test")
+            if billboard then
+                billboard:Destroy()
+            end
+        end
+    end]]
+    if UPDATE then
+        UPDATE:Disconnect()
+        UPDATE = nil
+    end
+    
+    if STATES then 
+        STATES:Disconnect()
+        STATES = nil 
+    end
+    
+    if SITTING then
+        SITTING:Disconnect()
+        SITTING = nil
+    end 
+    
+    if INPUTLOOP then
+        INPUTLOOP:Disconnect()
+        INPUTLOOP = nil
+    end
+    
+    if sprinting then
+        sprinting = false
+    end
+    if currentanim then
+        currentanim:Stop()
+        currentanim = nil
+    end
+    if Place == 17574618959 or Place == 88308889239232 or Place==123974602339071 then
+        StopScript()
+        wait(1)
+        choot("-rs")
+    else
+        wait(1)
+        respawn()
+        wait(1)
+        respawn()
+    end
 end)
