@@ -2,7 +2,7 @@ if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then loc
 
 
 coroutine.resume(coroutine.create(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Tag"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/animated/refs/heads/main/Tag"))()
 end))
 
 if isfolder and not isfolder("KDV3") then 
