@@ -10,9 +10,11 @@ if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then loc
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-r6")
 wait(3)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 5857632294, 5857617173, 5857625055, 4660196617, 4773932088")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 5857632294, 5857617173, 5857625055, 4660196617, 4773932088")
+game.ReplicatedStorage["01_server"]:FireServer("cmd", "-gh 5857632294, 5857617173, 5857625055, 4660196617, 4773932088")
 wait(3)
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-net")
+--game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-net")
+game.ReplicatedStorage["01_server"]:FireServer("cmd", "-net")
 local say = "Pumpkin Glitcher   |||   made by - urslower"--what it says
 if not e then
 game.StarterGui:SetCore("ChatMakeSystemMessage", {
