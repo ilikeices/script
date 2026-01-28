@@ -1,5 +1,9 @@
 --REQUIRED HAIR:
 
+if game.PlaceId == 168556275 then
+	game:GetService("Players").LocalPlayer:Kick("wrong game search: [UP] Just a baseplate. - creator: the local maze")
+end
+
 --https://www.roblox.com/catalog/63690008/Pal-Hair
 
 --Wear any 9 other hats/hair
