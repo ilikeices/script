@@ -1,5 +1,5 @@
 
---loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/script/refs/heads/main/game.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/script/refs/heads/main/game.luau"))()
 
 
 local _ = game.Players.LocalPlayer.DisplayName
