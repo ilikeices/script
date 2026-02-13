@@ -11,7 +11,7 @@ local Scripts = {
     "fgd.luau","flame.luau","friend.luau","galefighter.luau","game.luau",
     "giant.luau","goner.luau","grasshub.luau","hdf.luau","holiday.luau",
     "holihub.luau","hollidayhub.luau","hub.luau",
-    "kvd.Luau","laser.luau","minions.luau","na.luau","nightmaresans.luau",
+    "kvd.Luau","laser.luau","minions.luau","na.luau", "kdv3mod.luau", "nightmaresans.luau",
     "past.luau","pumkin.luau","rebel.luau","redhub.luau","ruinx.luau",
     "sanslastbreath.luau","vd.luau","voidboss.luau","vr.luau","warden.luau",
     "xester.luau","xr.luau","zero.luau","zerox.luau"
