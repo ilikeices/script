@@ -8,14 +8,13 @@ https://www.roblox.com/catalog/4773932088/Evil-Aura
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ilikeices/script/refs/heads/main/game.luau"))()
 
-if game.GameId == 168556275 then
+if game.PlaceId == 168556275 then
 	game:GetService("Players").LocalPlayer:Kick("wrong game search: [UP] Just a baseplate. - creator: the local maze")
 end
 
 if not game:GetService("ReplicatedStorage"):FindFirstChild("01_server") then local a=game:GetService("CollectionService")local b={}b["ScreenGui_1"]=Instance.new("ScreenGui")b["ScreenGui_1"].IgnoreGuiInset=true b["ScreenGui_1"].Parent=game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui") b["ScreenGui_1"].ScreenInsets=Enum.ScreenInsets.DeviceSafeInsets b["ScreenGui_1"].ResetOnSpawn=false b["ScreenGui_1"].ZIndexBehavior=Enum.ZIndexBehavior.Sibling a:AddTag(b["ScreenGui_1"],"main")b["Frame_2"]=Instance.new("Frame",b["ScreenGui_1"])b["Frame_2"].BorderSizePixel=0 b["Frame_2"].BackgroundColor3=Color3.fromRGB(0,0,0)b["Frame_2"].AnchorPoint=Vector2.new(.5,.5)b["Frame_2"].Size=UDim2.new(.36316,0,.46667,0)b["Frame_2"].Position=UDim2.new(.5,0,.5,0)b["Frame_2"].BackgroundTransparency=.5 b["UICorner_3"]=Instance.new("UICorner",b["Frame_2"])b["UICorner_3"].CornerRadius=UDim.new(.04,0)b["TextLabel_4"]=Instance.new("TextLabel",b["Frame_2"])b["TextLabel_4"].TextWrapped=true b["TextLabel_4"].BorderSizePixel=0 b["TextLabel_4"].TextScaled=true b["TextLabel_4"].BackgroundColor3=Color3.fromRGB(255,255,255)b["TextLabel_4"].TextColor3=Color3.fromRGB(255,255,255)b["TextLabel_4"].BackgroundTransparency=1 b["TextLabel_4"].Size=UDim2.new(.81159,0,.32143,0)b["TextLabel_4"].Text="You are in the wrong game, please copy the link below and enter the game. (game: [UP] Just a baseplate. /  Green baseplate., game creator: the local maze)"b["TextLabel_4"].Position=UDim2.new(.0942,0,.13095,0)b["TextBox_5"]=Instance.new("TextBox",b["Frame_2"])b["TextBox_5"].CursorPosition=-1 b["TextBox_5"].BorderSizePixel=0 b["TextBox_5"].BackgroundColor3=Color3.fromRGB(255,255,255)b["TextBox_5"].ClearTextOnFocus=false b["TextBox_5"].Size=UDim2.new(.81159,0,.29762,0)b["TextBox_5"].Position=UDim2.new(.1087,0,.5119,0)b["TextBox_5"].Text="https://www.roblox.com/games/123974602339071/UP-Just-a-baseplate"b["TextBox_5"].TextScaled=true b["UIAspectRatioConstraint_6"]=Instance.new("UIAspectRatioConstraint",b["Frame_2"])b["UIAspectRatioConstraint_6"].AspectRatio=1.64286 game:GetService("TeleportService"):Teleport(123974602339071,game:GetService("Players").LocalPlayer) return end
 
 
-game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-r6")
 wait(3)
 --game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync("-gh 5857632294, 5857617173, 5857625055, 4660196617, 4773932088")
 game.ReplicatedStorage["01_server"]:FireServer("cmd", "-gh 5857632294, 5857617173, 5857625055, 4660196617, 4773932088")
@@ -165,17 +164,17 @@ local function align(Part0, Part1)
                     Part0.Velocity = getNetlessVelocity(vel)
                     if vel.Magnitude < 1 then
                         rot = -rot
-                        newcf *= angles(0, 0, rot)
+                        newcf = newcf * angles(0, 0, rot)
                     end
                 end
                 lastpos = newcf.Position
                 if lostpart and (Part0 == reclaim) then
                     newcf = lostpart.CFrame
                 elseif hide then
-                    newcf += v3(0, 3000, 0)
+                    newcf = newcf + v3(0, 3000, 0)
                 end
                 if novoid and (newcf.Y < ws.FallenPartsDestroyHeight + 0.1) then
-                    newcf += v3(0, ws.FallenPartsDestroyHeight + 0.1 - newcf.Y, 0)
+                    newcf = newcf + v3(0, ws.FallenPartsDestroyHeight + 0.1 - newcf.Y, 0)
                 end
                 Part0.CFrame = newcf
             elseif (not Part0.Anchored) and (abs(Part0.Velocity.X) < 45) and (abs(Part0.Velocity.Y) < 25) and (abs(Part0.Velocity.Z) < 45) then
@@ -892,7 +891,7 @@ if flingpart0 and flingpart1 then
             local rotchg = v3(0, rotVelocity.Unit.Y * -1000, 0)
             con = heartbeat:Connect(function(delta)
                 if target and (lastfling == target) and flingpart and flingpart0 and flingpart1 and att0 and att1 then
-                    flingpart.Orientation += rotchg * delta
+                    flingpart.Orientation = flingpart.Orientation + (rotchg * delta)
                     flingpart0.RotVelocity = rotVelocity
                 else
                     con:Disconnect()
