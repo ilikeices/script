@@ -878,7 +878,6 @@ if flingpart0 and flingpart1 then
     end
 end
 
-game.ReplicatedStorage["01_server"]:FireServer("cmd", "-net")
 
 wait(6)
 
