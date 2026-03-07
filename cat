@@ -36,7 +36,7 @@ local v15 = false
 local v16 = true
 local v17 = false
 local v18 = true
-local u19 = 0.5
+local u19 = game:GetService("Players").RespawnTime + 0.5
 local v20 = 3
 local u21 = 2
 local v22 = 'HumanoidRootPart'
@@ -687,7 +687,7 @@ while true do
 
         _BindableEvent.Event:Connect(function()
             _BindableEvent:Destroy()
-            game.Players:Chat('-re')
+            --game.Players:Chat('-re')
             _StarterGui:SetCore('ResetButtonCallback', true)
 
             if u61 then
@@ -2372,7 +2372,7 @@ end
 return t
 end
 
-if game.GameId == 168556275 then
+if game.PlaceId == 168556275 then
 	game:GetService("Players").LocalPlayer:Kick("wrong game search: [UP] Just a baseplate. - creator: the local maze")
 end
 
