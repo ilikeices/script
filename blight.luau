@@ -17,7 +17,7 @@ if game.PlaceId == 168556275 then
 	game:GetService("Players").LocalPlayer:Kick("wrong game, search: [UP] Just a baseplate. - creator: the local maze")
 end
 
-wait(2.5)
+wait()
 
 
 local Vector3_101 = Vector3.new(1, 0, 1)
@@ -3347,6 +3347,13 @@ end
 -------------------------------------------------------
 --End Attacks N Stuff--
 -------------------------------------------------------
+
+Mouse.Button1Down:Connect(function()
+	if attack == false then
+		Flame_Burst()
+	end
+end)
+
 Mouse.KeyDown:connect(function(key)
 	if (VALUE1 == false and attack == false) or VALUE2 == true then
 		if key == "q" then
