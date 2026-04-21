@@ -7,8 +7,7 @@ local BASE_URL = "https://raw.githubusercontent.com/ilikeices/script/refs/heads/
 local Scripts = {
     "achromatix.luau","acromatic.luau","anyhub.luau","banhammer.luau","blockcar.luau",
     "burgerblood.luau","caducus.luau","car.luau","chara.luau","chill.luau",
-    "combine.luau","cop.luau","cursordog.luau","eyozen.luau","fakrvr.luau",
-    "fgd.luau","flame.luau","friend.luau","galefighter.luau",
+    "combine.luau","cop.luau","cursordog.luau","eyozen.luau","fakrvr.luau","flame.luau","friend.luau","galefighter.luau",
     "giant.luau","goner.luau","grasshub.luau","hdf.luau","holiday.luau",
     "holihub.luau","hollidayhub.luau","hub.luau","laser.luau","minions.luau", "nightmaresans.luau",
     "past.luau","pumkin.luau","rebel.luau","redhub.luau","ruinx.luau",
